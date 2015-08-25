@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -18,18 +20,63 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Creando Spinner
         final Spinner spinner=(Spinner)findViewById(R.id.spinner);
-        String[] list=getResources().getStringArray(R.array.Ciclos);
+        //Creando ListView
+        final ListView listView=(ListView)findViewById(R.id.listView);
+        //Obteniendo Recursos
+        final String[] materias=getResources().getStringArray(R.array.Materias);
+        final String[] codigos=getResources().getStringArray(R.array.Codigos);
+        final String[] pre=getResources().getStringArray(R.array.Prerequisitos);
+
+
+        final String[] list=getResources().getStringArray(R.array.Ciclos);
+        //Llenando Array spinner
         ArrayList<Ciclo> ciclos= new ArrayList<>();
         ciclos.add(new Ciclo(list[0],R.mipmap.n1));
         ciclos.add(new Ciclo(list[1],R.mipmap.n2));
         ciclos.add(new Ciclo(list[2],R.mipmap.n3));
         ciclos.add(new Ciclo(list[3], R.mipmap.n4));
 
+        //Declarando arrays materias
+
+        //Enviando Adaptador
         spinner.setAdapter(new AdapterSpinner(MainActivity.this, ciclos));
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ArrayList<Materias> materiasArrayList =new ArrayList<>();
+                listView.setAdapter(null);
+                switch (position){
+                    case 0:
+
+                        for(int i=0;i<4;i++){
+                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n1));
+                        }
+
+                        break;
+                    case 1:
+
+                        for(int i=4;i<8;i++){
+                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n2));
+                        }
+                        break;
+                    case 2:
+
+                        for(int i=8;i<12;i++){
+                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n3));
+                        }
+                        break;
+                    case 3:
+
+                        for(int i=12;i<=15;i++){
+                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n4));
+                        }
+                        break;
+                }
+                listView.setAdapter(new AdapterMaterias(MainActivity.this, materiasArrayList));
+
 
             }
 
@@ -38,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     @Override

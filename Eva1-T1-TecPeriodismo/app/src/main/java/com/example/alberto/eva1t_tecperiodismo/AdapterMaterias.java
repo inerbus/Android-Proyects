@@ -28,6 +28,7 @@ public class AdapterMaterias extends ArrayAdapter<Materias> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.itemlist,null);
         convertView=inflater.inflate(R.layout.itemlist,parent,false);
         Materias m=list.get(position);
         TextView cod=(TextView)convertView.findViewById(R.id.codigo);
@@ -35,11 +36,10 @@ public class AdapterMaterias extends ArrayAdapter<Materias> {
         TextView pre=(TextView)convertView.findViewById(R.id.prerequisito);
         ImageView image=(ImageView)convertView.findViewById(R.id.imageView);
 
-        cod.setText(m.getCodigo());
+        cod.setText(list.get(position).getCodigo());
         mat.setText(m.getMateria());
         pre.setText(m.getPrer());
         image.setImageResource(m.getImg());
-
         return convertView;
     }
 }
