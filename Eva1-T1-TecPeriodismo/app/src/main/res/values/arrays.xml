@@ -60,4 +60,14 @@
         <item>PERA-C</item>
         <item>SIN REQUISITO</item>
     </string-array>
+    <string-array name="nombres">
+        <item>Alberto Antonio Molina</item>
+        <item>José Martín Molina</item>
+        <item>Alba Rebeca Menjivar</item>
+    </string-array>
+    <string-array name="carnets">
+        <item>25-0929-2011</item>
+        <item>25-0928-2011</item>
+        <item>25-4708-2011</item>
+    </string-array>
 </resources>

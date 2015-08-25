@@ -6,10 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,15 +20,26 @@ public class MainActivity extends AppCompatActivity {
 
         //Creando Spinner
         final Spinner spinner=(Spinner)findViewById(R.id.spinner);
-        //Creando ListView
+        //Creando ListView Materias
         final ListView listView=(ListView)findViewById(R.id.listView);
+        //Creando listview alumnos
+        ListView alumnoList=(ListView)findViewById(R.id.menu);
         //Obteniendo Recursos
         final String[] materias=getResources().getStringArray(R.array.Materias);
         final String[] codigos=getResources().getStringArray(R.array.Codigos);
+        String[] alumno=getResources().getStringArray(R.array.nombres);
+        String[] carnet=getResources().getStringArray(R.array.carnets);
         final String[] pre=getResources().getStringArray(R.array.Prerequisitos);
-
-
         final String[] list=getResources().getStringArray(R.array.Ciclos);
+        //Llenando Lista de Menu
+        ArrayList<Alumnos> alumnosArrayList = new ArrayList<>();
+        alumnosArrayList.add(new Alumnos(alumno[0],carnet[0],R.mipmap.alberto));
+        alumnosArrayList.add(new Alumnos(alumno[1],carnet[1],R.mipmap.martin));
+        alumnosArrayList.add(new Alumnos(alumno[2],carnet[2],R.mipmap.rebeca));
+
+        //Llenando Lista menu
+        alumnoList.setAdapter(new AdapterAlumno(this,alumnosArrayList));
+
         //Llenando Array spinner
         ArrayList<Ciclo> ciclos= new ArrayList<>();
         ciclos.add(new Ciclo(list[0],R.mipmap.b1));
@@ -38,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         ciclos.add(new Ciclo(list[2],R.mipmap.b3));
         ciclos.add(new Ciclo(list[3], R.mipmap.b4));
 
-        //Declarando arrays materias
+
 
         //Enviando Adaptador
         spinner.setAdapter(new AdapterSpinner(MainActivity.this, ciclos));
