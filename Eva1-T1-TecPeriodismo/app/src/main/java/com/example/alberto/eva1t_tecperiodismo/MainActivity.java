@@ -1,15 +1,13 @@
 package com.example.alberto.eva1t_tecperiodismo;
 
-import android.app.ActionBar;
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -20,15 +18,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner spinner=(Spinner)findViewById(R.id.spinner);
+        final Spinner spinner=(Spinner)findViewById(R.id.spinner);
         String[] list=getResources().getStringArray(R.array.Ciclos);
         ArrayList<Ciclo> ciclos= new ArrayList<>();
         ciclos.add(new Ciclo(list[0],R.mipmap.n1));
         ciclos.add(new Ciclo(list[1],R.mipmap.n2));
         ciclos.add(new Ciclo(list[2],R.mipmap.n3));
-        ciclos.add(new Ciclo(list[3],R.mipmap.n4));
+        ciclos.add(new Ciclo(list[3], R.mipmap.n4));
 
-        spinner.setAdapter(new AdapterSpinner(MainActivity.this,ciclos));
+        spinner.setAdapter(new AdapterSpinner(MainActivity.this, ciclos));
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     @Override
