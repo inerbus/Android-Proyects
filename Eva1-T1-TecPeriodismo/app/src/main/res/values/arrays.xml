@@ -6,53 +6,57 @@
         <item>Ciclo 3</item>
         <item>Ciclo 4</item>
     </string-array>
-    <string-array name="Codc1">
+    <string-array name="Codigos">
         <item>TECO-C</item>
         <item>GRSU-1</item>
         <item>INFO-T</item>
         <item>REA-A</item>
-    </string-array>
-    <string-array name="Codc2">
         <item>METP-C</item>
         <item>REME-C</item>
         <item>FOTO-C</item>
         <item>SOCC-P</item>
-    </string-array>
-    <string-array name="Codc3">
         <item>REPO-C</item>
         <item>RIEI-C</item>
         <item>FOPE-C</item>
         <item>PERA-C</item>
-    </string-array>
-    <string-array name="Codc4">
         <item>INGI-I</item>
         <item>GEOP-C</item>
         <item>DIPD-C</item>
         <item>PETV-C</item>
     </string-array>
-    <string-array name="Matc1">
+    <string-array name="Materias">
         <item>Teoria de la Comunicación</item>
         <item>Gramatica Superior</item>
         <item>Informática</item>
         <item>Realidad Nacional</item>
-    </string-array>
-    <string-array name="Matc2">
         <item>Metodos y Técnicas de Investigación Periodística</item>
         <item>Redacción para Medios de Comunicación</item>
         <item>Fotografía</item>
         <item>Sociología de la Comunicación</item>
-    </string-array>
-    <string-array name="Matc3">
         <item>Reporteo</item>
         <item>Reportaje Interactivo e Investigativo</item>
         <item>Fotoperiodismo</item>
         <item>Periodísmo Radiofónico</item>
-    </string-array>
-    <string-array name="Matc4">
         <item>Inglés</item>
         <item>Géneros de Opinión</item>
         <item>Diseño Periodístico Digital</item>
         <item>Periodísmo Televisimo</item>
     </string-array>
-
+    <string-array name="Prerequisitos">
+        <item>SIN REQUISITO</item>
+        <item>SIN REQUISITO</item>
+        <item>SIN REQUISITO</item>
+        <item>SIN REQUISITO</item>
+        <item>TECO-C</item>
+        <item>GRSU-I</item>
+        <item>SIN REQUISITO</item>
+        <item>REA-A</item>
+        <item>METP-C</item>
+        <item>REME-C</item>
+        <item>FOTO-C</item>
+        <item>REME-C</item>
+        <item>SIN REQUISITO</item>
+        <item>RIEI-C</item>
+        <item>PERA-C</item>
+    </string-array>
 </resources>
