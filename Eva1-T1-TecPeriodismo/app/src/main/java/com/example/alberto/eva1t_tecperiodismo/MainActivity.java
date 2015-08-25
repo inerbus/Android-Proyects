@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         final String[] list=getResources().getStringArray(R.array.Ciclos);
         //Llenando Array spinner
         ArrayList<Ciclo> ciclos= new ArrayList<>();
-        ciclos.add(new Ciclo(list[0],R.mipmap.n1));
-        ciclos.add(new Ciclo(list[1],R.mipmap.n2));
-        ciclos.add(new Ciclo(list[2],R.mipmap.n3));
-        ciclos.add(new Ciclo(list[3], R.mipmap.n4));
+        ciclos.add(new Ciclo(list[0],R.mipmap.b1));
+        ciclos.add(new Ciclo(list[1],R.mipmap.b2));
+        ciclos.add(new Ciclo(list[2],R.mipmap.b3));
+        ciclos.add(new Ciclo(list[3], R.mipmap.b4));
 
         //Declarando arrays materias
 
