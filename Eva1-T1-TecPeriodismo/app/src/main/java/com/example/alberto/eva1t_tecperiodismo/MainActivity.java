@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,13 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getActionBar();
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Ciclos, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Spinner spinner=(Spinner)findViewById(R.id.spinner);
-            spinner.setAdapter(adapter);
+        String[] list=getResources().getStringArray(R.array.Ciclos);
+        ArrayList<Ciclo> ciclos= new ArrayList<>();
+        ciclos.add(new Ciclo(list[0],R.mipmap.n1));
+        ciclos.add(new Ciclo(list[1],R.mipmap.n2));
+        ciclos.add(new Ciclo(list[2],R.mipmap.n3));
+        ciclos.add(new Ciclo(list[3],R.mipmap.n4));
 
+        spinner.setAdapter(new AdapterSpinner(MainActivity.this,ciclos));
     }
 
     @Override

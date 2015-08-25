@@ -5,8 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#f4ffeb">
+        android:layout_height="50dp">
 
         <ImageView
             android:layout_width="40dp"
@@ -20,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Téc Periodísmo"
             android:id="@+id/textView"
             android:layout_centerVertical="true"
@@ -30,13 +29,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Large Text"
-            android:id="@+id/ciclo"
+            android:id="@+id/nameciclo"
             android:layout_alignTop="@+id/textView"
             android:layout_toRightOf="@+id/textView"
             android:layout_toEndOf="@+id/textView"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp" />
+            android:layout_marginLeft="33dp"
+            android:layout_marginStart="33dp" />
     </RelativeLayout>
 </LinearLayout>
