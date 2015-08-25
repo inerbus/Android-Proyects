@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         //Llenando Lista de Menu
         ArrayList<Alumnos> alumnosArrayList = new ArrayList<>();
         alumnosArrayList.add(new Alumnos(alumno[0],carnet[0],R.mipmap.alberto));
-        alumnosArrayList.add(new Alumnos(alumno[1],carnet[1],R.mipmap.martin));
-        alumnosArrayList.add(new Alumnos(alumno[2],carnet[2],R.mipmap.rebeca));
+        alumnosArrayList.add(new Alumnos(alumno[1],carnet[1],R.mipmap.martin1));
+        alumnosArrayList.add(new Alumnos(alumno[2],carnet[2],R.mipmap.rebeca1));
 
         //Llenando Lista menu
         alumnoList.setAdapter(new AdapterAlumno(this,alumnosArrayList));
