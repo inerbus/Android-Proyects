@@ -5,9 +5,9 @@
     android:weightSum="1">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="90dp"
         android:layout_weight="0.04"
-        android:background="#eeeeee">
+        android:background="#eed3d3d3">
 
         <ImageView
             android:layout_width="60dp"
@@ -15,33 +15,49 @@
             android:id="@+id/imageView"
             android:layout_margin="12dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/codigo"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignTop="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView" />
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Large Text"
+                android:id="@+id/codigo"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/materia"
-            android:layout_below="@+id/codigo"
-            android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Medium Text"
+                android:id="@+id/materia" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/prerequisito"
-            android:layout_below="@+id/materia"
-            android:layout_alignLeft="@+id/materia"
-            android:layout_alignStart="@+id/materia" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Requisito: "
+                    android:id="@+id/textView2" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/prerequisito"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
