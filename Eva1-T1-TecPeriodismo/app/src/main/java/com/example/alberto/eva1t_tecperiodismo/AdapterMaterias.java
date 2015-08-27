@@ -28,7 +28,7 @@ public class AdapterMaterias extends ArrayAdapter<Materias> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.itemlist,null);
+
         convertView=inflater.inflate(R.layout.itemlist,parent,false);
         Materias m=list.get(position);
         TextView cod=(TextView)convertView.findViewById(R.id.codigo);

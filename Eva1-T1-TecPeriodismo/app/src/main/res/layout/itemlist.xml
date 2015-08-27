@@ -5,7 +5,7 @@
     android:weightSum="1">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="100dp"
         android:layout_weight="0.04"
         android:background="#eed3d3d3">
 
@@ -28,14 +28,17 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Large Text"
-                android:id="@+id/codigo"/>
+                android:id="@+id/codigo"
+                android:textColor="#010101"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Medium Text"
-                android:id="@+id/materia" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nombre Materia"
+                android:id="@+id/materia"
+                 />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -47,13 +50,15 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Requisito: "
-                    android:id="@+id/textView2" />
+                    android:id="@+id/textView2"
+                    android:textStyle="italic"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Small Text"
                     android:id="@+id/prerequisito"
+                    android:textStyle="italic"
                     />
             </LinearLayout>
 
