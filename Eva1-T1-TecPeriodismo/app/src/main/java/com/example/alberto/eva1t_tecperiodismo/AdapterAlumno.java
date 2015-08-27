@@ -27,16 +27,20 @@ public class AdapterAlumno extends ArrayAdapter<Alumnos>{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        //Inflando el layout personalizado para la lista de menu
         LayoutInflater inflater= (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView=inflater.inflate(R.layout.itemmenu,parent,false);
-
+        //Accediendo a los controladores del Layout personalizado
         TextView name=(TextView)convertView.findViewById(R.id.name);
         TextView carnet=(TextView)convertView.findViewById(R.id.carnet);
         ImageView image=(ImageView) convertView.findViewById(R.id.user);
 
+        //Enviando valores a los controladores
+
         name.setText(alumnosArrayList.get(position).getNombre());
         carnet.setText(alumnosArrayList.get(position).getCarnet());
         image.setImageResource(alumnosArrayList.get(position).getImage());
+
         return convertView;
     }
 }

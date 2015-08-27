@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Created by alberto on 24/08/2015.
  */
 public class AdapterMaterias extends ArrayAdapter<Materias> {
-   Context context;
+    Context context;
     ArrayList<Materias> list;
 
     public AdapterMaterias(Context context, ArrayList<Materias> list) {
@@ -27,19 +27,23 @@ public class AdapterMaterias extends ArrayAdapter<Materias> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+        //Inflando la vista con el layout personalizado
+        LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView=inflater.inflate(R.layout.itemlist,parent,false);
-        Materias m=list.get(position);
+
+        // Accediendo a los controladores del layout personalizado
         TextView cod=(TextView)convertView.findViewById(R.id.codigo);
         TextView mat=(TextView)convertView.findViewById(R.id.materia);
         TextView pre=(TextView)convertView.findViewById(R.id.prerequisito);
         ImageView image=(ImageView)convertView.findViewById(R.id.imageView);
 
+        //Enviando datos segun la position a cada controlador
         cod.setText(list.get(position).getCodigo());
-        mat.setText(m.getMateria());
-        pre.setText(m.getPrer());
-        image.setImageResource(m.getImg());
+        mat.setText(list.get(position).getMateria());
+        pre.setText(list.get(position).getPrer());
+        image.setImageResource(list.get(position).getImg());
+
         return convertView;
     }
 }

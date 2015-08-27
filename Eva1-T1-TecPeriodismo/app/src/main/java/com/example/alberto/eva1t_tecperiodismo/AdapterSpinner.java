@@ -31,16 +31,21 @@ public class AdapterSpinner extends ArrayAdapter<Ciclo> {
 
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
+
        return getCustomView(position,convertView,parent);
     }
 
+    //Se define dicho metodo para llenar las dos vistas del spinner, vista normal y vista desplegable
     public View getCustomView(int position,View row,ViewGroup parent){
+        //Infla el layout personalizado
         LayoutInflater inflater =(LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.spinneritem,null);
         row = inflater.inflate(R.layout.spinneritem, parent, false);
 
+        //Accediendo a los controles del layout personalizado
         TextView name=(TextView)row.findViewById(R.id.nameciclo);
         ImageView img=(ImageView)row.findViewById(R.id.imageciclo);
+
+        //Enviando datos a los controladores del layout personalizado
         name.setText(ciclos.get(position).getName());
         img.setImageResource(ciclos.get(position).getImg());
 
