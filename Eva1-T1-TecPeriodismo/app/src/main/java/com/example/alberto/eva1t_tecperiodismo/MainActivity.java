@@ -1,5 +1,7 @@
 package com.example.alberto.eva1t_tecperiodismo;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +19,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Creando Mensaje desplegable
+        final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Descripción");
+        alertDialog.setIcon(R.mipmap.talk);
+        alertDialog.setButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            // aquí puedes añadir funciones
+            }
+        });
+
+
+
 
         //Creando Spinner
         final Spinner spinner=(Spinner)findViewById(R.id.spinner);
@@ -48,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         ciclos.add(new Ciclo(list[1],R.mipmap.b2));
         ciclos.add(new Ciclo(list[2],R.mipmap.b3));
         ciclos.add(new Ciclo(list[3], R.mipmap.b4));
+        ciclos.add(new Ciclo(list[4], R.mipmap.b5));
 
 
 
@@ -60,33 +76,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //Se crea un nuevo ArrayList de Materias cuando el evento se despliega
-                ArrayList<Materias> materiasArrayList =new ArrayList<>();
+                ArrayList<Materias> materiasArrayList = new ArrayList<>();
 
                 //Segun el item seleccionado del Spinner se llena el Array list de Materias
-                switch (position){
+                switch (position) {
                     case 0:
 
-                        for(int i=0;i<4;i++){
-                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n1));
+                        for (int i = 0; i < 4; i++) {
+                            materiasArrayList.add(new Materias(materias[i], pre[i], codigos[i], R.mipmap.a1));
                         }
 
                         break;
                     case 1:
 
-                        for(int i=4;i<8;i++){
-                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n2));
+                        for (int i = 4; i < 8; i++) {
+                            materiasArrayList.add(new Materias(materias[i], pre[i], codigos[i], R.mipmap.a2));
                         }
                         break;
                     case 2:
 
-                        for(int i=8;i<12;i++){
-                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n3));
+                        for (int i = 8; i < 12; i++) {
+                            materiasArrayList.add(new Materias(materias[i], pre[i], codigos[i], R.mipmap.a3));
                         }
                         break;
                     case 3:
 
-                        for(int i=12;i<=15;i++){
-                            materiasArrayList.add(new Materias(materias[i],pre[i],codigos[i],R.mipmap.n4));
+                        for (int i = 12; i < 16; i++) {
+                            materiasArrayList.add(new Materias(materias[i], pre[i], codigos[i], R.mipmap.a4));
+                        }
+                        break;
+                    case 4:
+                        for (int i = 16; i < 20; i++) {
+                            materiasArrayList.add(new Materias(materias[i], pre[i], codigos[i], R.mipmap.a5));
                         }
                         break;
                 }
@@ -99,6 +120,37 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        //Añadiendo Listener al listview para mostrar descripcion
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Extrayendo recursos de descripcion
+                String[] des = getResources().getStringArray(R.array.descripciones);
+
+                //Encontrando la position
+                switch (spinner.getSelectedItemPosition()){
+                    case 0:
+                        alertDialog.setMessage(des[position]);
+                        break;
+                    case 1:
+                        alertDialog.setMessage(des[position + 4]);
+                        break;
+                    case 2:
+                        alertDialog.setMessage(des[position + 8]);
+                        break;
+                    case 3:
+                        alertDialog.setMessage(des[position + 12]);
+                        break;
+                    case 4:
+                        alertDialog.setMessage(des[position + 16]);
+                        break;
+                }
+                //Mostrnaod Dialogo
+                alertDialog.show();
 
             }
         });

@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="nombres">
+        <item>Alberto Antonio Molina</item>
+        <item>José Martín Molina</item>
+        <item>Alba Rebeca Menjivar</item>
+    </string-array>
+    <string-array name="carnets">
+        <item>25-0929-2011</item>
+        <item>25-0928-2011</item>
+        <item>25-4708-2011</item>
+    </string-array>
     <string-array name="Ciclos">
         <item>Ciclo 1</item>
         <item>Ciclo 2</item>
         <item>Ciclo 3</item>
         <item>Ciclo 4</item>
+        <item>Ciclo 5</item>
     </string-array>
     <string-array name="Codigos">
         <item>TECO-C</item>
@@ -23,6 +34,10 @@
         <item>GEOP-C</item>
         <item>DIPD-C</item>
         <item>PETV-C</item>
+        <item>REPI-C</item>
+        <item>ETIC-A</item>
+        <item>INFP-A</item>
+        <item>PERE-C</item>
     </string-array>
     <string-array name="Materias">
         <item>Teoria de la Comunicación</item>
@@ -41,6 +56,11 @@
         <item>Géneros de Opinión</item>
         <item>Diseño Periodístico Digital</item>
         <item>Periodísmo Televisimo</item>
+        <item>Relaciones Públicas</item>
+        <item>Ética</item>
+        <item>Infoperiodismo</item>
+        <item>Periodismo Electrónico</item>
+
     </string-array>
     <string-array name="Prerequisitos">
         <item>SIN REQUISITO</item>
@@ -57,17 +77,35 @@
         <item>REME-C</item>
         <item>SIN REQUISITO</item>
         <item>RIEI-C</item>
+        <item>FOPE-C</item>
         <item>PERA-C</item>
+        <item>GEOP-C</item>
         <item>SIN REQUISITO</item>
+        <item>DIPD-C</item>
+        <item>PETV-C</item>
     </string-array>
-    <string-array name="nombres">
-        <item>Alberto Antonio Molina</item>
-        <item>José Martín Molina</item>
-        <item>Alba Rebeca Menjivar</item>
+
+    <string-array name="descripciones">
+        <item>Teoria de la comunicacion, La palabra comunicación proviene del latín "comunis" que significa común. De allí que comunicar, signifique transmitir ideas y pensamientos con el objetivo de ponerlos en común con otro. Esto supone la utilización de un código de comunicación compartidoa, Generalmente tendemos a pensar en el lenguaje cuando hablamos de códigos, pero un éste, supone un concepto bastante más amplio. Además de los códigos verbales (orales y escritos), existen otros como los gestos, los movimientos de la cara y el cuerpo, los dados por la forma y el color (por ejemplo las señales de tránsito) o la música (en donde hay reglas que marcan una estructura). Naturalmente, los códigos no verbales, al igual que el lenguaje, varían de acuerdo a las diferentes culturas</item>
+        <item>Gramatica Superior, los gramaticos habia establecido tres partes en la gramatica que son: prosodia, analogia y sintaxis. Nuestras gramaticas tradicionales se atuvieron, en general a esas tres porciones que hoy podemos nombrar como fonologia, morfologia y sintaxis. No obstante la dificultad de abordar el estudio de la formacion de palabras condujo a no incluir ese aspecto en conocidas gramaticas de la mitad del siglo xx</item>
+        <item>Informatica,  también llamada computación en América,1 es una ciencia que estudia métodos, técnicas, procesos, con el fin de almacenar, procesar y transmitir información y datos en formato digital. La informática se ha desarrollado rápidamente a partir de la segunda mitad del siglo XX, con la aparición de tecnologías tales como el circuito integrado, Internet y el teléfono móvil, En los inicios del proceso de información, con la informática sólo se facilitaban los trabajos repetitivos y monótonos del área administrativa. La automatización de esos procesos trajo como consecuencia directa una disminución de los costes y un incremento en la productividad. En la informática convergen los fundamentos de las ciencias de la computación, la programación y metodologías para el desarrollo de software, la arquitectura de computadores, las redes de computadores, la inteligencia artificial y ciertas cuestiones relacionadas con la electrónica. Se puede entender por informática a la unión sinérgica de todo este conju		nto de disciplinas</item>
+        <item>Realidad Nacional, Se refiere a lo que esta relacionado con la nacion, esta idea hace mencion a un pais o a la comunidad de personas que comparten un territorio y que se encuentra gobernada por una misma autoridad, asi tambien podemos definir como un conjunto de acontesimientos con el pasar de los anos lo podemos ver como una historia</item>
+        <item>Metodos y Tecnicas de Investigacion Periodistica, Este tipo de periodismo tiene una característica que le diferencia del periodismo de actualidad. Hay que descartar la idea de periodismo intrépido, que arriesga su vida porque son excepciones, Es un conjunto metodológico que el periodista debe aplicar con meticulosidad cuando quiere ahondar en un asunto de interés público. Comienza en EE.UU a principios de siglo y llega a Europa después de la II Guerra Mundial (en España después del franquismo). La fecha que marca el inicio de este periodismo de investigación en nuestro país es diciembre de 1983 cuando El País publica un trabajo de investigación: la muerte de Carrero Blanco, además edita un libro de las que las siete primeras ediciones se agotan en un mes. Este fue el primer trabajo de investigación</item>
+        <item>Redaccion para Medios de Comunicacion,  Pese a la reciente popularización del teletrabajo, todavía se realiza mayoritariamente el quehacer informativo en las Redacciones de los distintos medios de comunicación, véase prensa, revistas, emisoras de radio, canales de televisión o agencias de noticias. Eso sí, el lugar en el que se elabora la información tiene actualmente poco que ver con el de hace quince o veinte años, cuando proliferaban por las Redacciones las máquinas de escribir o el telefax </item>
+        <item>fotografia, El sistema original de fotografía que se mantuvo hasta hace algunos años actuaba con películas sensibles con el propósito de almacenar la imagen capturada para luego imprimirla. Más recientemente, se utilizan sistemas digitales con sensores y memorias para tomar fotos de una forma más sencilla, rápida y con mejores resultados</item>
+        <item>Sociologia de la Comunicacion,La sociología de la comunicación es un área de la sociología que estudia las implicaciones socioculturales que nacen de la mediación simbólica, con particular atención a los medios de comunicación de masas (radio, cine, televisión, internet, Estudiar los medios de comunicación significa examinar cómo el mismo mensaje mediático tiene, según el contexto cultural, económico y social consecuencias distintas sobre los grupos sociales y los individuos</item>
+        <item>Reporteo, Un reportero es un periodista cuya principal actividad consiste en recolectar y presentar informaciones sobre un determinado evento o acontecimiento de cierta actualidad, lo que frecuentemente debe hacer desde el lugar mismo donde se producen o se produjeron los hechos significantes</item>
+        <item>Reportaje Interpretativo e Investigativo, El periodismo es, entonces, una especie de espejo, en el cual se mira la sociedad, donde se puede intentar entender lo que le pasa al ser humano en cualquier parte del mundo; es una manera de saber qué ocurre en lugares lejanos que no es posible visitar, en las ciudades que ni siquiera sabemos que existen; es, finalmente, la forma más práctica de conocer el mundo y lo que sucede con él</item>
+        <item>Fotoperiodismo, Por encima de cualquier consideración, el fotoperiodismo tiene como objetivo prioritario contar la historia que se vive en el momento en que se produce: el fotógrafo captura el tiempo, congela el movimiento y revela lo invisible con innigualable realidad. La meta del fotoperiodismo es contar al lector qué había allí, clara, rápidamente y sin misterio alguno, confusión o enigma</item>
+        <item>Periodismo Radiofonico, El periodismo de radio exige que la información sea difundida de manera clara y concisa. Para ello, es necesario que el texto usado como guión esté bien organizado y que facilite una lectura sin tropiezos y fácil de expresar en voz alta. La lectura en radio hace necesaria una redacción cuidada y adecuada a este medio, que debe hacerse de manera sencilla, mediante el uso de palabras y oraciones comprensibles desde el punto de vista conceptual y fónico. Conviene recurrir a la reiteración de ideas, es decir, dar a conocer un contenido y repetirlo con el objetivo de que la memoria del receptor lo retenga ya que el mensaje radiofónico es efímero</item>
+        <item>Ingles, Dentro del inglés podemos distinguir entre dos acentos, el acento frisón, vinculado estrechamente al idioma frisón, hablado por al menos medio millón de personas en la provincia holandesa de Frisia, región muy cercana a Alemania y en varias islas en el Mar del Norte</item>
+        <item>Generos de Opinion, puesto que recoge la opinión del periódico como institución: así se conoce la opinión abierta y directa del medio sobre los temas de actualidad, y sus planteamientos ideológicos implícitos, La opinión sobre temas publicados en el mismo número, suelen ser los que transcienden y de mayor importancia. Pueden ser temas políticos, económicos, sociales</item>
+        <item>Diseno Periodismo Digital, también llamado ciberperiodismo, designa la modalidad del periodismo que tiene a Internet como entorno principal de desarrollo, así como a las redes y dispositivos digitales en general. Según palabras de Ramón Salaverría,1 «es la especialidad del periodismo que emplea el ciberespacio para investigar, producir y, sobre todo, difundir contenidos periodísticos, Esta modalidad del periodismo es fruto del desarrollo de las nuevas tecnologías, ocurrida muy especialmente desde finales del siglo xx. Los medios de comunicación social como la radio, la televisión, la prensa, el cine y otros, con sus diferentes géneros y modos de expresión, han ido incursionando en el nuevo medio de comunicación social del siglo xx</item>
+        <item>Periodismo Televisivo, El periodismo se ha forjado en la calle, entre la pluma y el papel. Posteriormente, el desarrollo de la tecnología ha logrado transformar los mensajes en ondas eléctricas que se reflejan en sonidos e imágenes, surge la radio y la televisión. Este tipo de comunicación no pierde en su compleja elaboración la base de su estructura de alter a ego, de un emisor a un receptor. Y es propósito de este trabajo incursionar en una parte de ese complejo sistema, el emisor, ¿Cuáles son las condiciones elementales que lo involucran en la elaboración de mensajes? ¿Cómo entender la elección de significantes y su construcción dentro de un entramado panorama de imágenes y sonidos? ¿A qué responde la edificación del espectro noticioso? En fin, queremos acercarnos al periodismo televisivo dentro de una visión académica pero también reflexiva</item>
+        <item>Relaciones Publicas, Las Relaciones Públicas son un conjunto de acciones de comunicación estratégica coordinadas y sostenidas a lo largo del tiempo, que tienen como principal objetivo fortalecer los vínculos con los distintos públicos, escuchándolos, informándolos y persuadiéndolos para lograr consenso, fidelidad y apoyo de los mismos en acciones presentes y/o futuras</item>
+        <item>Etica, Ética es una rama de la filosofía dedicada a las cuestiones morales. La palabra ética proviene del latín ethicus, y este del griego antiguo (êthicos), derivada de êthos, que significa "carácter" o "perteneciente al carácter", La ética es diferente de la moral, porque la moral se basa en la obediencia a las normas, las costumbres y preceptos o mandamientos culturales, jerárquicos o religiosos, mientras que la ética busca fundamentar la manera de vivir por el pensamiento humano</item>
+        <item>Infoperiodismo, De acuerdo a varios autores, entre los que destaca el catedrático español Juan de Pablos, la infografía es un nuevo género periodístico -como la nota informativa, la entrevista, la crónica, etcétera-, en donde se reúne información textual con información visual. De Pablos prefiere utilizar el término infoperiodismo para destacar el papel destacado que está desempeñando la información viso-textual en las páginas de los diarios</item>
+        <item>Periodismo Electronico, El periodismo electrónico es ya una realidad en internet, aunque su madurez está todavía lejos. La información periodística en línea debe aún buscar su propio lenguaje discursivo, basándose en las posibilidades técnicas que ya existen. Este artículo analiza cuáles son esas características inherentes al discurso periodístico digital y traza una breve historia del desarrollo de los medios de comunicación en línea tanto en estados Unidos como en Europa, y por supuesto en España</item>
     </string-array>
-    <string-array name="carnets">
-        <item>25-0929-2011</item>
-        <item>25-0928-2011</item>
-        <item>25-4708-2011</item>
-    </string-array>
+
 </resources>
